@@ -1,25 +1,10 @@
 <% include header %>
-<header>
-	<aside>
-		<h1>Rafa&euml;l De Jongh</h1>
-		<h2>Advanced Front End Coding</h2>
-	</aside>
-	<nav>
-		<% for (var i = 0; i < category.length; i++) { %>
-			<a href="/category/<%- i %>"><%- category[i] %></a>
-		<% } %>
-	</nav>
-</header>
-<main>
-<% var teller = 1; %>
-<% posts.forEach(function(item){ %>
-<section>
-<a href=/items/<%- item.id %>>
-	<h2><%- item.titel %></h2>
-	<!--<p><%- item.samenvatting %></p>-->
-	<img class="feature-img" src="/images/<%- item.picture %>" alt="<%- item.titel %>">
-</a>
-</section>
-<% teller++;}); %>
+<main><% var teller = 1; %><% posts.forEach(function(item){ %>
+	<section>
+		<a href=/items/<%- item.id %>>
+			<h2><%- item.titel %></h2>
+			<img class="feature-img" src="/images/<%- item.picture %>" alt="<%- item.titel %>">
+		</a>
+	</section><% teller++;}); %>
 </main>
 <% include footer %>
