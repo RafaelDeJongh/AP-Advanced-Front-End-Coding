@@ -2,12 +2,13 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
-app.use(function requestHandler(req,res){
+app.use(function requestHandler(req,res,next){
 	res.setHeader("Developed-By","Rafael De Jongh");
 	res.setHeader("Content-Security-Policy","default-src https:; img-src https: data: blob:; font-src https: data:; script-src https:; style-src https:;");
 	res.setHeader("X-Frame-Options","SAMEORIGIN");
 	res.setHeader("X-XSS-Protection","1; mode=block");
 	res.setHeader("Referrer-Policy","no-referrer-when-downgrade");
+	next();
 });
 
 app.set('postsFile', require('./config/posts.json'));
