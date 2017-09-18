@@ -1,0 +1,28 @@
+{
+  "name": "ap-advanced-front-end-coding",
+  "version": "1.0.0",
+  "description": "Advanced Front End Coding App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelDeJongh/AP-Advanced-Front-End-Coding.git"
+  },
+  "keywords": [
+    "Advanced",
+    "Front",
+    "End",
+    "Coding"
+  ],
+  "author": "Rafaël De Jongh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelDeJongh/AP-Advanced-Front-End-Coding/issues"
+  },
+  "homepage": "https://github.com/RafaelDeJongh/AP-Advanced-Front-End-Coding#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
