@@ -1,7 +1,8 @@
-
+body{line-height:1.4em}
 /*Header
 -------------*/
 header{
+	top:0;
 	position:fixed;
 	width:100%;
 	height:100px;
@@ -22,25 +23,22 @@ header nav{
 }
 /*Content
 -------------*/
-h2{line-height:1.4em}
 main{
 	padding-top:100px;
 	height:100%;
 	display:grid;
-	grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+	grid-template-columns:repeat(auto-fit,minmax(33.33%,1fr));
 }
-section{
-	position:relative;
-}
-section a{
+section{position:relative}
+section:not(.single) a{
 	padding:20px;
 	border:none;
 	height:100%;
 	width:100%;
 	display:block;
 }
-section a,section p,section h2{color:#fff}
-section a:before{
+section:not(.single) a,section:not(.single) p,section:not(.single) h2{color:#fff}
+section:not(.single) a:before{
 	content:"";
 	display:block;
 	position:absolute;
@@ -52,8 +50,8 @@ section a:before{
 	background:rgba(0,0,0,.2);
 	transition:all .3s ease;
 }
-section:hover a:before{background:rgba(0,0,0,.5)}
-section a img.feature-img{
+section:not(.single):hover a:before{background:rgba(0,0,0,.5)}
+section:not(.single) a img.feature-img{
 	position:absolute;
 	top:0;
 	left:0;
@@ -63,7 +61,7 @@ section a img.feature-img{
 	max-height:100%;
 	object-fit:cover;
 }
-section h2{
+section:not(.single) h2{
 	font-size:1.4em;
 	text-align:center;
 	transition:all .3s ease;
@@ -73,9 +71,35 @@ section h2{
 	margin:0;
 	line-height:1;
 }
-section:hover h2{
+section:not(.single):hover h2{
 	top:50%;
 	opacity:1
+}
+/*Blog
+-------------*/
+.single{
+	width:60%;
+	margin:100px auto 20px;
+
+}
+.single img{
+	height:300px;
+	width:100%;
+	object-fit:cover;
+}
+.single h2{text-align:center;margin-top:35px}
+.single .time-stamp{
+	text-align:center;
+	margin-top:12px;
+}
+.single .time-stamp .time{margin-right:5px}
+.single .single-body{
+	width:80%;
+	margin:25px auto;
+	min-height:10vw;
+}
+.single .categories,.single .tags{
+	margin:15px 0;
 }
 /*Footer
 -------------*/
@@ -84,7 +108,7 @@ footer{
 	color:#888;
 	padding:1em;
 	text-align:center;
-	font-size:12px
+	font-size:12px;
 }
 /*Links
 -------------*/
@@ -98,15 +122,14 @@ a,a:visited,a:focus{
 			transition:all .2s ease-in;
 }
 a:active,a:hover{color:#555;border-color:#555}
-
 /*Media Queries*/
 @media screen and (max-width:1140px){
-
+	main{grid-template-columns:repeat(auto-fit,minmax(50%,1fr));}
 }
 @media screen and (max-width:768px){
 	header{position:relative;height:auto;grid-template-columns:1fr;text-align:center;}
 	header nav{text-align:center;margin:10px 0 5px}
-	main{padding:0}
+	main{padding:0;grid-template-columns:repeat(auto-fit,minmax(100%,1fr));}
 }
 @media screen and (max-width:567px){
 
