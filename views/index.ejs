@@ -1,7 +1,7 @@
 <% include header %>
 <main><% var teller = 1; %><% posts.forEach(function(item){ %>
 	<section>
-		<a href=/items/<%- item.id %>>
+		<a href=/blog/<%- item.id %>>
 			<h2><%- item.titel %></h2>
 			<img class="feature-img" src="/images/<%- item.picture %>" alt="<%- item.titel %>">
 		</a>
