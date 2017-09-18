@@ -2,9 +2,9 @@
   "name": "ap-advanced-front-end-coding",
   "version": "1.0.0",
   "description": "Advanced Front End Coding App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/RafaelDeJongh/AP-Advanced-Front-End-Coding#readme",
   "dependencies": {
+    "daemon": "^1.1.0",
+    "ejs": "^2.5.7",
     "express": "^4.15.4"
   }
 }

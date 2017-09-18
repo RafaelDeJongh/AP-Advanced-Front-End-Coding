@@ -1,0 +1,113 @@
+
+/*Header
+-------------*/
+header{
+	display:grid;
+	grid-template-columns:50% 50%;
+	background-color:#333;
+	border-bottom:2px solid #900;
+	color:#fff;
+	padding:1em 10%
+}
+header h1{margin:0}
+header h2{font-size:1em}
+header nav{
+	text-align:right;
+	align-self:center;
+}
+/*Content
+-------------*/
+h2{line-height:1.4em}
+main{
+	height:30%;
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+}
+section{
+	position:relative;
+}
+section a{
+	padding:20px;
+	border:none;
+	height:100%;
+	width:100%;
+	display:block;
+}
+section a,section p,section h2{color:#fff}
+section a:before{
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	background:rgba(0,0,0,.2);
+	transition:all .3s ease;
+}
+section:hover a:before{background:rgba(0,0,0,.5)}
+section a img.feature-img{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-2;
+	width:100%;
+	height:100%;
+	max-height:100%;
+	object-fit:cover;
+}
+section h2{
+	font-size:1.4em;
+	text-align:center;
+	transition:all .3s ease;
+	top:0;
+	position:relative;
+	opacity:0;
+}
+section:hover h2{top:10vh;opacity:1;}
+/*Footer
+-------------*/
+footer{
+	background-color:#eee;
+	color:#888;
+	padding:1em;
+	text-align:center;
+	font-size:12px
+}
+/*Links
+-------------*/
+a,a:visited,a:focus{
+	outline:0;
+	color:#000;
+	text-decoration:none;
+	-webkit-transition:all .2s ease-in;
+	   -moz-transition:all .2s ease-in;
+		 -o-transition:all .2s ease-in;
+			transition:all .2s ease-in;
+}
+a:active,a:hover{color:#555;border-color:#555}
+/*Nav*/
+nav a,nav a:visited,nav a:focus{color:#eee}
+nav a:active,nav a:hover{color:#fff;border-color:#fff}
+/*Media Queries*/
+@media screen and (max-width:1140px){
+	main{grid-template-columns:repeat(3,1fr);height:60%;}
+}
+@media screen and (max-width:768px){
+	main{grid-template-columns:repeat(2,1fr)}
+}
+@media screen and (max-width:580px){
+	main{grid-template-columns:1fr;height:120vh;}
+}
+/*Scrollbar
+-------------*/
+::-webkit-scrollbar{width:12px;height:12px;background-color:#f5f5f5}
+::-webkit-scrollbar-corner{background-color:#f5f5f5}
+::-webkit-scrollbar-track{background-color:#f5f5f5}
+::-webkit-scrollbar-thumb{background:#900}
+::-webkit-scrollbar:horizontal{height:12px}
+/*Selection
+-------------*/
+::selection{color:#fff;background-color:#900}
+::-moz-selection{color:#fefefe;background-color:#900}

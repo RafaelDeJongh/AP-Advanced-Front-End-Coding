@@ -1,0 +1,14 @@
+{
+	"posts":
+	[
+		{
+			"titel":"Les1: NodeJS & ExpressJS",
+			"id":1,
+			"datum":"18/09/2017 – 14:00",
+			"tags":["ExpressJS","NodeJS"],
+			"categorieen":["Node","Express"],
+			"body":"Les 1: Verfrissing van Express JS en Node JS. Hier moesten we een simpele blog pagina maken in NodeJS om de opvolging van de lessen in op te nemen.",
+			"picture":"node-js.png"
+		}
+	]
+}
