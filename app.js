@@ -3,11 +3,16 @@ var path = require("path");
 var app = express();
 
 app.use(function requestHandler(req,res,next){
+	//Security
 	res.setHeader("Developed-By","Rafael De Jongh");
 	res.setHeader("Content-Security-Policy","default-src 'self' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; script-src 'self' https:; style-src 'self' https:;");
 	res.setHeader("X-Frame-Options","SAMEORIGIN");
 	res.setHeader("X-XSS-Protection","1; mode=block");
 	res.setHeader("Referrer-Policy","no-referrer-when-downgrade");
+	res.removeHeader('X-Powered-By');
+	//Caching
+	res.setHeader("Cache-Control","public, max-age=2592000");
+	res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
 	next();
 });
 
