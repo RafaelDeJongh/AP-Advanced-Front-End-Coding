@@ -12,6 +12,7 @@ app.use(function requestHandler(req,res,next){
 });
 
 app.set('postsFile', require('./config/posts.json'));
+app.set('tagsFile', require('./config/tags.json'));
 app.set('categoryFile', require('./config/category.json'));
 
 app.set("views",path.resolve(__dirname, "views"));
@@ -21,6 +22,7 @@ app.use(express.static('public'))
 
 app.use(require("./routes/root_router"));
 app.use(require("./routes/posts_router"));
+app.use(require("./routes/tags_router"));
 app.use(require("./routes/category_router"));
 
 app.listen(app.get('port'),function(){console.log('Node server is running on port:',app.get('port'));});
