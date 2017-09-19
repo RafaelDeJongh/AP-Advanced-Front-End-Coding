@@ -24,11 +24,16 @@ header nav{
 	text-align:right;
 	align-self:center;
 }
+/*Nav
+-------------*/
+nav{display:block}
+.mobile-menu{display:none}
+.mobile-menu:before{cursor:pointer}
 /*Content
 -------------*/
 main{
 	padding-top:100px;
-	height: calc(100% + 50px);
+	height:calc(100% + 50px);
 	display:grid;
 	grid-template-columns:repeat(auto-fit,minmax(33.33%,1fr));
 }
@@ -89,7 +94,7 @@ section:not(.single):hover h2{
 	width:100%;
 	object-fit:cover;
 }
-.single h2{text-align:center;margin-top:35px}
+.single h2{text-align:center;margin-top:35px;line-height:1em}
 .single .time-stamp{
 	text-align:center;
 	margin-top:12px;
@@ -98,7 +103,7 @@ section:not(.single):hover h2{
 .single .single-body{
 	width:80%;
 	margin:25px auto;
-	min-height:15vw;
+	min-height:230px;
 }
 .single .categories,.single .tags{
 	margin:15px 0;
@@ -133,9 +138,23 @@ a:active,a:hover{color:#555;border-color:#555}
 	header{position:relative;height:auto;grid-template-columns:1fr;text-align:center;}
 	header nav{text-align:center;margin:10px 0 5px}
 	main{padding:0;grid-template-columns:repeat(auto-fit,minmax(100%,1fr));}
+	.single{margin:20px auto;width:80%}
+	.single .categories,.single .tags{text-align:center}
+	.single .single-body{min-height:200px}
+}
+@media screen and (min-width:568px){
+	nav{display:block!important}
 }
 @media screen and (max-width:567px){
-
+	.mobile-menu{display:inline-block;font-size:2em;margin-top:10px}
+	nav{display:none}
+	nav a{
+		display:block;
+		padding:10px 0;
+		border:none;
+		border-radius:5px
+	}
+	nav a:hover{background-color:#f8f8f8}
 }
 /*Scrollbar
 -------------*/
