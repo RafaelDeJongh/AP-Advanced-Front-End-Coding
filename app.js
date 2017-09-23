@@ -9,6 +9,7 @@ app.use(function requestHandler(req,res,next){
 	res.setHeader("X-Frame-Options","SAMEORIGIN");
 	res.setHeader("X-XSS-Protection","1; mode=block");
 	res.setHeader("Referrer-Policy","no-referrer-when-downgrade");
+	res.setHeader("Expect-CT","max-age=86400,enforce");
 	res.removeHeader('X-Powered-By');
 	//Caching
 	res.setHeader("Cache-Control","public, max-age=2592000");
