@@ -88,6 +88,17 @@ section:not(.single):hover h2{
 	top:50%;
 	opacity:1
 }
+#M404{
+	font-size:40pt;
+	display:block;
+	margin-bottom:.5em;
+	margin-top:-3em;
+}
+#R404{
+	display:block;
+	margin-top:2em;
+	font-size:.8em;
+}
 /*Blog
 -------------*/
 .single{

@@ -30,5 +30,12 @@ app.use(require("./routes/root_router"));
 app.use(require("./routes/posts_router"));
 app.use(require("./routes/tags_router"));
 app.use(require("./routes/category_router"));
+app.use(function(req,res,next){
+	res.status(404);
+	res.render("404",{
+		posts:req.app.get('postsFile').posts,
+		category:req.app.get('categoryFile').category
+	});
+});
 
 app.listen(app.get('port'),function(){console.log('Node server is running on port:',app.get('port'));});
