@@ -26,9 +26,9 @@ header nav{
 }
 /*Nav
 -------------*/
-nav{display:block}
-.mobile-menu{display:none}
+.mobile-menu,#menu-toggle{display:none}
 .mobile-menu:before{cursor:pointer}
+nav{display:block;transition:all .3s ease-in-out}
 /*Content
 -------------*/
 main{
@@ -136,18 +136,22 @@ a:active,a:hover{color:#555;border-color:#555}
 }
 @media screen and (max-width:768px){
 	header{position:relative;height:auto;grid-template-columns:1fr;text-align:center;}
-	header nav{text-align:center;margin:10px 0 5px}
+	header nav{text-align:center}
 	main{padding:0;grid-template-columns:repeat(auto-fit,minmax(100%,1fr));}
 	.single{margin:20px auto;width:80%}
 	.single .categories,.single .tags{text-align:center}
 	.single .single-body{min-height:200px}
 }
-@media screen and (min-width:568px){
-	nav{display:block!important}
-}
 @media screen and (max-width:567px){
 	.mobile-menu{display:inline-block;font-size:2em;margin-top:10px}
-	nav{display:none}
+	nav{
+		display:block;
+		visibility:hidden;
+		overflow:hidden;
+		max-height:0;
+		margin:0;
+	}
+	#menu-toggle:checked + nav{max-height:200px;margin:10px 0 5px;visibility:visible}
 	nav a{
 		display:block;
 		padding:10px 0;
