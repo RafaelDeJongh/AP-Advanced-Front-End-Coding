@@ -12,17 +12,17 @@ app.use(function requestHandler(req,res,next){
 	res.setHeader("Expect-CT","max-age=86400,enforce");
 	res.removeHeader('X-Powered-By');
 	//Caching
-	res.setHeader("Cache-Control","public, max-age=2592000");
-	res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
+	res.setHeader("Cache-Control","public,max-age=2592000");
+	res.setHeader("Expires",new Date(Date.now() + 2592000000).toUTCString());
 	next();
 });
 
-app.set('postsFile', require('./config/posts.json'));
-app.set('tagsFile', require('./config/tags.json'));
-app.set('categoryFile', require('./config/category.json'));
+app.set('postsFile',require('./config/posts.json'));
+app.set('tagsFile',require('./config/tags.json'));
+app.set('categoryFile',require('./config/category.json'));
 
-app.set("views",path.resolve(__dirname, "views"));
-app.set("view engine", "ejs");
+app.set("views",path.resolve(__dirname,"views"));
+app.set("view engine","ejs");
 app.set('port',(process.env.PORT || 5000));
 app.use(express.static('public'))
 
