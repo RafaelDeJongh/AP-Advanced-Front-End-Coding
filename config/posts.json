@@ -8,7 +8,8 @@
 			"category":["NodeJS"],
 			"tags":["ExpressJS","NodeJS"],
 			"body":"Les 1: Verfrissing van Express JS en Node JS. Hier moesten we een simpele blog pagina maken in NodeJS om de opvolging van de lessen in op te nemen.",
-			"picture":"node-js.png"
+			"picture":"node-js.png",
+			"pictureS":"node-js-380x214.png"
 		},
 		{
 			"titel":"Les 2: Getting Started with Mongo DB",
@@ -17,7 +18,8 @@
 			"category":["MongoDB"],
 			"tags":["MongoDB"],
 			"body":"Les 2: Dit is les twee waar we starten met Mongo DB.",
-			"picture":"mongodb_intro.png"
+			"picture":"mongodb_intro.png",
+			"pictureS":"mongodb_intro-380x214.png"
 		},
 		{
 			"titel":"Les 3: Mongo DB",
@@ -26,7 +28,8 @@
 			"category":["MongoDB"],
 			"tags":["NodeJS","ExpressJS","MongoDB"],
 			"body":"Les 3: Dit is les drie waar we verder gaan met Mongo DB.",
-			"picture":"mongodb.png"
+			"picture":"mongodb.png",
+			"pictureS":"mongodb-380x214.png"
 		},
 		{
 			"titel":"Les 4: Getting Started With ReactJS",
@@ -35,7 +38,8 @@
 			"category":["ReactJS"],
 			"tags":["ReactJS","NodeJS"],
 			"body":"Les 4: Dit is les vier waar we starten met ReactJS",
-			"picture":"reactjs-gettingstarted.png"
+			"picture":"reactjs-gettingstarted.png",
+			"pictureS":"reactjs-gettingstarted-380x214.png"
 		},
 		{
 			"titel":"Les 5: ReactJS",
@@ -44,7 +48,8 @@
 			"category":["ReactJS"],
 			"tags":["ReactJS"],
 			"body":"Les 5: Dit is les vijf waar we verder gaan met ReactJS.",
-			"picture":"reactjs.png"
+			"picture":"reactjs.png",
+			"pictureS":"reactjs-380x214.png"
 		},
 		{
 			"titel":"Les 6: MERN Stack",
@@ -53,7 +58,8 @@
 			"category":["MongoDB","ExpressJS","ReactJS","NodeJS"],
 			"tags":["MongoDB","ExpressJS","ReactJS","NodeJS"],
 			"body":"Les 6: Dit is de laatste les waar we alles van de MERN stack bij elkaar voegen.",
-			"picture":"MERN.png"
+			"picture":"MERN.png",
+			"pictureS":"MERN-380x214.png"
 		}
 	]
 }
