@@ -1,0 +1,99 @@
+/*General
+-------------*/
+body{
+	margin-top:70px;
+}
+/*Header
+-------------*/
+#header{
+	z-index:999;
+	margin:0;
+	background:#f8f8f8;
+	width:100%;
+	position:fixed;
+	top:0;
+	display:grid;
+	align-items:center;
+	min-height:70px;
+	border-bottom:1px solid #999;
+	box-shadow:0 1px 2px rgba(0,0,0,.1);
+}
+#header .container-fluid{padding:0}
+/*Nav
+-------------*/
+.navbar-brand{padding:8px 15px;border:none;}
+.navbar-brand:hover,.navbar-brand:focus{border:none;color:#000;text-shadow:0 0 1px rgba(0,0,0,.1);}
+.navbar-brand h1{
+	margin:0;
+	font-size:26px;
+}
+.navbar-brand h2{
+	margin:0;
+	font-size:12px
+}
+.navbar-default .navbar-nav>li>a{
+	border-width:2px;
+	-webkit-transition:all .2s ease-in-out;
+	   -moz-transition:all .2s ease-in-out;
+		 -o-transition:all .2s ease-in-out;
+			transition:all .2s ease-in-out
+}
+.navbar-default{
+	margin:0;
+	border:none;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	background:none;
+	border-bottom:2px solid;
+}
+/*Content
+-------------*/
+.alert{margin-top:25px}
+/*Blog
+-------------*/
+.blog .category{top:-1px}
+.glyphtext{
+	display:inline-block;
+	margin:5px 0 5px 10px
+}
+header.post-header{text-align:center}
+/*Footer
+-------------*/
+#footer{
+	text-align:center;
+	font-size:12px;
+	padding:15px 0
+}
+/*Links
+-------------*/
+a,a:visited,a:focus{
+	outline:0;
+	color:#000;
+	border-bottom:1px solid transparent;
+	-webkit-transition:all .2s ease;
+	   -moz-transition:all .2s ease;
+		 -o-transition:all .2s ease;
+			transition:all .2s ease
+}
+a:active,a:hover{color:#555;border-color:#555;text-decoration:none;}
+/*Media Queries*/
+@media screen and (max-width:1140px){
+
+}
+@media screen and (max-width:768px){
+
+}
+@media screen and (max-width:567px){
+
+}
+/*Scrollbar
+-------------*/
+::-webkit-scrollbar{width:12px;height:12px;background-color:#f5f5f5}
+::-webkit-scrollbar-corner{background-color:#f5f5f5}
+::-webkit-scrollbar-track{background-color:#f5f5f5}
+::-webkit-scrollbar-thumb{background:#222}
+::-webkit-scrollbar:horizontal{height:12px}
+/*Selection
+-------------*/
+::selection{color:#fff;background-color:#222}
+::-moz-selection{color:#fefefe;background-color:#222}

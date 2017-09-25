@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<article>
+				<header class="post-header">
+					{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive" alt="{{data.post.title}}">{{/if}}
+					<h2 class="post-title">{{data.post.title}}</h2>
+					<h5><span class="glyphicon glyphicon-time category" aria-hidden="true" title="Posted on: {{data.post._.publishedDate.format "D/MM/YYYY"}}"></span><p class="glyphtext">{{data.post._.publishedDate.format "D/MM/YYYY"}}</p></h5>
+					<h5><span class="glyphicon glyphicon-folder-open category" aria-hidden="true" title="Posted in"></span><p class="glyphtext">{{{categoryList data.post.categories}}}</p></h5>
+				</header>
+				<div class="post">
+					{{{data.post.content.extended}}}
+				</div>
+				<hr>
+				<p><a href="/blog">&larr; back to the blog</a></p>
+			</article>
+		</div>
+	</div>
+</div>

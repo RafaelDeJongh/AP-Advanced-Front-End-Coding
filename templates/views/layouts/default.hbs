@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all">
+<meta name="author" content="Rafa&euml;l De Jongh">
+<meta name="description" content="Welcome on Rafa&euml;l De Jongh's Blog for the Advanced Front End Coding course given by Artesis Plantijn.">
+<meta name="keywords" content="rafael de jongh,rafael,de jongh,web,web developer,web designer,belgian,belgium,3D artist,2D artist,artist,3D,2D">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rafa&euml;l De Jongh | Advanced Front End Coding">
+<meta property="og:description" content="Welcome on Rafa&euml;l De Jongh's Blog for the Advanced Front End Coding course given by Artesis Plantijn.">
+<meta property="og:url" content="https://www.rafaeldejongh-afc.ga/">
+<meta property="og:site_name" content="Rafa&euml;l De Jongh">
+<meta property="fb:app_id" content="530416997145169">
+<meta property="og:image" content="https://www.rafaeldejongh.com/wp-content/uploads/2017/08/RafaelDeJongh-Web-Developer-3D-Artist.jpg">
+<meta property="og:image:secure_url" content="https://www.rafaeldejongh.com/wp-content/uploads/2017/08/RafaelDeJongh-Web-Developer-3D-Artist.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Welcome on Rafa&euml;l De Jongh's Blog for the Advanced Front End Coding course given by Artesis Plantijn.">
+<meta name="twitter:title" content="Rafa&euml;l De Jongh | Advanced Front End Coding">
+<meta name="twitter:site" content="@Rafael_De_Jongh">
+<meta name="twitter:image" content="https://www.rafaeldejongh.com/wp-content/uploads/2017/08/RafaelDeJongh-Web-Developer-3D-Artist.jpg">
+<meta name="twitter:creator" content="@Rafael_De_Jongh">
+<meta name="generator" content="MERN Stack">
+<link rel='shortlink' href='https://www.rafaeldejongh-afc.ga/'>
+<link rel="canonical" href="https://www.rafaeldejongh-afc.ga/">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/images/favicon/manifest.json">
+<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#990000">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#990000">
+<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#990000">
+<title>Rafa&euml;l De Jongh | Advanced Front End Coding</title>
+<link rel="stylesheet" type="text/css"href="/styles/site.min.css">
+<link rel="stylesheet" type="text/css" href="/styles/style.css">
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<div role="navigation" class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<a href="/" class="navbar-brand">
+								<h1>Rafa&euml;l De Jongh</h1>
+								<h2>Advanced Front End Coding</h2>
+							</a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-left">
+									{{# each navLinks}}
+									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+										<a href="{{ href }}">{{ label }}</a>
+									</li>
+								{{/each}}
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								{{#if user}}
+								<li><a href="/keystone/signout">Sign Out</a></li>
+								{{else}}
+								<li><a href="/keystone/signin">Sign In</a></li>
+								{{/if}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<!--
+				Flash messages allow you to display once-off status messages to users, e.g. form
+				validation errors, success messages, etc
+			-->
+			{{#if messages}}
+			<div id="flash-messages" class="container">
+				{{#if messages.info}}
+				<div class="alert alert-info">
+						{{{flashMessages messages.info}}}
+				</div>
+				{{/if}}
+				{{#if messages.success}}
+				<div class="alert alert-success">
+						{{{flashMessages messages.success}}}
+				</div>
+				{{/if}}
+				{{#if messages.warning}}
+				<div class="alert alert-warning">
+						{{{flashMessages messages.warning}}}
+				</div>
+				{{/if}}
+				{{#if messages.error}}
+				<div class="alert alert-danger">
+						{{{flashMessages messages.error}}}
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<!-- The content block should contain the body of your template's content-->
+			{{{body}}}
+		</div>
+		<footer id="footer">Copyright &copy; 2017 | Rafa&euml;l De Jongh | <a href="https://www.rafaeldejongh.com" target="_blank">www.rafaeldejongh.com</a> | All Rights Reserved.</footer>
+		{{!--
+			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>
